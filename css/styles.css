@@ -84,6 +84,30 @@ letter-spacing: 0.03em;
 .contacts{
     margin-left: auto;
 }
+.contacts .mail::before{
+    display: inline-block;
+    content: '';
+    background-image: url(../images/mail-black.svg);
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    color: var(--main-color);
+}
+.contacts .phone::before{
+    display: inline-block;
+    content: '';
+    background-image: url(../images/smartphone.svg);
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: top;
+    color: var(--main-color);
+    vertical-align: middle;
+}
+
 .navigacion .studio{
     color: var(--accent-color);
     display: block;
@@ -104,24 +128,13 @@ letter-spacing: 0.03em;
 .contacts .item+.item{
     margin-left: 50px;
 }
-.contacts .telefon::before{
-    outline: 1px solid red;
-    display: inline-block;
-    content: '';
-    width: 12px;
-    height: 18px;
-    margin-right: 10px;
-    background-image: url(../images/mail.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-}
+
 .header .navigacion :hover,
 .header .navigacion :focus{
     color: var(--accent-color);
 }
-.header .contacts :hover,
-.header .contacts :focus{
+.header .studio :hover,
+.header .studio :focus{
     color: var(--accent-color);
 }  
 .contacts .telefon{
@@ -135,16 +148,17 @@ letter-spacing: 0.03em;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    /* background-color: var(--bgc-secondary); */
+    
     
 }
  .hero-cont{
-     background-color:#C4C4C4 ;
+     background:#C4C4C4 ;
+    width: 100%;
     background-image: linear-gradient(to right, rgba(47,48,58,0.4),rgba(47,48,58,0.4)), url(../images/fond.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 600px;
-    max-width: 1600px;
+    /* max-width: 1600px; */
     margin-left: auto;
     margin-right: auto;
     background-size: cover;
@@ -302,21 +316,53 @@ letter-spacing: 0.03em;
 .clients h2{
     margin-bottom: 50px;
 }
-.clients-link{
-    outline: 1px solid red;
-    width: 170px;
-    height: 90px;
-    
-}
+.clients-link a{
+    display: block;
+    margin: 0;
 
+}
+/* .clients-link svg{
+    display: block;
+} */
 .clients-list{
     display: flex;
-    justify-content: center;
-
 }
 .clients-list .clients-link + .clients-link{
     margin-left: 30px;
 }
+.clients-link .link{
+    display:flex;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;  
+    width: 170px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+   
+}
+.clients-link .icon{
+    fill: #AFB1B8;
+
+}
+
+.clients-link .icon:hover,
+.clients-link .icon:focus{
+    fill: var(--accent-color);
+    
+}
+
+/* .clients-link a{
+    display: block;
+} */
+
+
+.clients-link .link :hover{
+    color: var(--accent-color);
+
+}
+
+
+
 .footer{
 background-color: var(--bgc-secondary) ;
 font-weight: 400;
@@ -328,6 +374,7 @@ letter-spacing: 0.03em;
 color: var(--additional-color);
 font-style: normal;
 }
+
 .footer-address{
     margin-top: 20px;
 }
@@ -339,9 +386,47 @@ font-style: normal;
 color: var(--contacts-color);
 font-style: normal;
 }
-.footer.container{
+.address-container{
     padding-top: 60px;
     padding-bottom: 60px;
+    margin-right: 70px;
+}
+.footer .network{
+    display: flex;
+}
+.social-networks{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--additional-color);
+    margin-bottom: 20px;
+}
+.network-link .link{
+    display: flex;
+    width: 44px;
+    height: 44px;
+   justify-content: center;
+    align-items: center; 
+    background: #44454E;
+   
+}
+.network .network-link+.network-link{
+    margin-left: 10px;
+}
+.network .link{
+border: 1px solid  #44454E;
+border-radius: 50%;
+
+}
+
+.footer.section{
+    display: flex;
+    align-items: baseline;
+    /* justify-content: center; */
+
+
 }
 /*стили Портфолио*/
 .portfolio h2{
